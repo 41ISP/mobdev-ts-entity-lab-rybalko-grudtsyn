@@ -12,7 +12,7 @@ export interface IPet {
   age: number
   breed?: string
   isVaccinated: boolean
-  colors: Colors
+  colors?: Colors
   weight?: number
   createdAt: string
   updatedAt: string
