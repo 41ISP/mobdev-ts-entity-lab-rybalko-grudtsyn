@@ -1,4 +1,4 @@
-import { useState, FormEvent } from "react"
+import { useState, type FormEvent } from "react"
 import { usePetsStore } from "../usePetsStore"
 import type { IPetInput } from "../types"
 
@@ -109,7 +109,7 @@ export function PetForm() {
                 Цвет меха
                 <input
                     type="text"
-                    value={form.colors.fur ?? ""}
+                    value={form.colors?.fur ?? ""}
                     onChange={(e) =>
                         onChange("colors", { ...form.colors, fur: e.target.value })
                     }
@@ -120,7 +120,7 @@ export function PetForm() {
                 Цвет глаз
                 <input
                     type="text"
-                    value={form.colors.eyes ?? ""}
+                    value={form.colors?.eyes ?? ""}
                     onChange={(e) =>
                         onChange("colors", { ...form.colors, eyes: e.target.value })
                     }
@@ -131,7 +131,7 @@ export function PetForm() {
                 Цвет кожи
                 <input
                     type="text"
-                    value={form.colors.skin ?? ""}
+                    value={form.colors?.skin ?? ""}
                     onChange={(e) =>
                         onChange("colors", { ...form.colors, skin: e.target.value })
                     }

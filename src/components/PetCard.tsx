@@ -48,9 +48,9 @@ export function PetCard({
                 )}
 
                 <div className="chips">
-                    {Object.entries(colors).map(([key, value], i) => (
+                    {colors && Object.entries(colors).map(([key, value], i) => (
                         <span key={i} className="chip">
-                             {COLOR_LABELS[key as Color]}: {value}
+                             {COLOR_LABELS[key as Color]}: {value as string}
                         </span>
                     ))}
                 </div>
